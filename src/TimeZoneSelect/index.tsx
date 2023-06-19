@@ -1,7 +1,7 @@
 import './index.scss'
 import { useState, useEffect } from 'react'
 
-const TIMEZONE_API = 'http://worldtimeapi.org/api/timezone'
+const TIMEZONE_API = 'https://worldtimeapi.org/api/timezone'
 
 const TimeZoneSelect = () => {
   const [timezonesList, setTimezonesList] = useState<string[]>([])
