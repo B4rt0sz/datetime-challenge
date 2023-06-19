@@ -31,7 +31,7 @@ You can see it immediately by following the link in the `Live demo` section or a
 
 2. You can use `npm run build`, it will build the app for the production to the `build` folder.
 
-- Now please go to the dist folder `cd build` and use `npx serve`, now you can use `http://localhost:3000` to view it in the browser.
+- Now please go to the build folder `cd build` and use `npx serve`, now you can use `http://localhost:3000` to view it in the browser.
 
 ## For the project I used:
 

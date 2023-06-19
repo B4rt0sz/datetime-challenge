@@ -1,1 +1,30 @@
 @import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --default-font: 'Poppins', sans-serif;
+  --dark-txt: #262d3d;
+  --main-bgc: #f3f8fe;
+  --light-bgc: #ffffff;
+  --midGrayColor: #c0c0c0;
+  --darkGrayColor: #62697a;
+  --blueColor: #0075ff;
+  --drop-shadow: 0px 4px 15px #5c5c5c33;
+}
+
+body {
+  font-family: var(--default-font);
+  min-height: 100vh;
+  background-color: var(--main-bgc);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bgc);
+  color: var(--dark-txt);
+}
