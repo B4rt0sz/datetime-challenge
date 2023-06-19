@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# :date: DateTime Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:scroll: Creation of a website that will display the current time after selecting time zone.
 
-## Available Scripts
+Main features:
 
-In the project directory, you can run:
+- Selection of time zone
+- Showing current time at selected place
 
-### `npm start`
+## Live demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:computer: [DateTime Challenge](https://datetime-challenge.netlify.app)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Clone this repository and npm install:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/B4rt0sz/datetime-challenge.git
+cd datetime-challenge
+npm install
+```
 
-### `npm run build`
+## How to run the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can see it immediately by following the link in the `Live demo` section or after `Installation` step you have two choices:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. You can use `npm start` in the main app folder, to run the app in the development mode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- It should open automatically but if not please use `http://localhost:3000` to view it in the browser.
 
-### `npm run eject`
+2. You can use `npm run build`, it will build the app for the production to the `build` folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Now please go to the dist folder `cd build` and use `npx serve`, now you can use `http://localhost:3000` to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## For the project I used:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- React
+- TypeScript
+- HTML
+- CSS/SCSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copyright (c) 2023 Bartosz Szućko
