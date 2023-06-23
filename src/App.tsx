@@ -1,9 +1,9 @@
-import TimeZoneSelect from 'TimeZoneSelect'
+import TimeZone from 'TimeZone'
 
 function App() {
   return (
     <div className='wrapper'>
-      <TimeZoneSelect />
+      <TimeZone />
     </div>
   )
 }
