@@ -1,0 +1,12 @@
+.dateTime__error {
+  p {
+    margin-top: 16px;
+    color: var(--darkGrayColor);
+    font-size: 14px;
+  }
+
+  span {
+    color: var(--redColor);
+    font-weight: 600;
+  }
+}

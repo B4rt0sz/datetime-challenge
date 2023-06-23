@@ -5,13 +5,17 @@ import TimeZoneInfo from './components/TimezoneInfo'
 import { useAppState } from 'store/store'
 import { useTimezones } from 'hooks/useTimezones'
 import { useTimezoneData } from 'hooks/useTimezoneData'
+import TimezoneError from './components/TimezoneError'
 
 const TIMEZONE_API = 'https://worldtimeapi.org/api/timezone'
 
 const TimeZone = () => {
   const { timezoneState, setTimezoneState } = useAppState()
-  const { timezonesList } = useTimezones(TIMEZONE_API)
-  const { timezoneData } = useTimezoneData(TIMEZONE_API, timezoneState.selectedTimezone)
+  const { timezonesList, timezonesError } = useTimezones(TIMEZONE_API)
+  const { timezoneData, timezoneDataError } = useTimezoneData(
+    TIMEZONE_API,
+    timezoneState.selectedTimezone
+  )
 
   useEffect(() => {
     if (timezonesList) {
@@ -45,8 +49,17 @@ const TimeZone = () => {
 
   return (
     <div className='dateTime__container'>
-      <TimezoneSelect />
-      <TimeZoneInfo />
+      {timezonesError || timezoneDataError ? (
+        <TimezoneError
+          timezonesError={timezonesError as Error}
+          timezoneDataError={timezoneDataError as Error}
+        />
+      ) : (
+        <>
+          <TimezoneSelect />
+          <TimeZoneInfo />
+        </>
+      )}
     </div>
   )
 }
