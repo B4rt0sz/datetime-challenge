@@ -9,10 +9,12 @@ import TimezoneError from './components/TimezoneError'
 
 const TIMEZONE_API = 'https://worldtimeapi.org/api/timezone'
 
+const LoadingMessage = <div className='dateTime__container-loading'>Loading...</div>
+
 const TimeZone = () => {
   const { timezoneState, setTimezoneState } = useAppState()
-  const { timezonesList, timezonesError } = useTimezones(TIMEZONE_API)
-  const { timezoneData, timezoneDataError } = useTimezoneData(
+  const { timezonesList, timezonesLoading, timezonesError } = useTimezones(TIMEZONE_API)
+  const { timezoneData, timezoneDataLoading, timezoneDataError } = useTimezoneData(
     TIMEZONE_API,
     timezoneState.selectedTimezone
   )
@@ -49,7 +51,9 @@ const TimeZone = () => {
 
   return (
     <div className='dateTime__container'>
-      {timezonesError || timezoneDataError ? (
+      {timezonesLoading ? (
+        LoadingMessage
+      ) : timezonesError || timezoneDataError ? (
         <TimezoneError
           timezonesError={timezonesError as Error}
           timezoneDataError={timezoneDataError as Error}
@@ -57,7 +61,7 @@ const TimeZone = () => {
       ) : (
         <>
           <TimezoneSelect />
-          <TimeZoneInfo />
+          <TimeZoneInfo isDateTimeLoading={timezoneDataLoading} />
         </>
       )}
     </div>

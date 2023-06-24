@@ -1,12 +1,17 @@
 import './index.scss'
 import { useAppState } from 'store/store'
 
-const TimeZoneInfo = () => {
+type TimeZoneInfoProps = {
+  isDateTimeLoading: true | false
+}
+
+const TimeZoneInfo = ({ isDateTimeLoading }: TimeZoneInfoProps) => {
   const { timezoneState } = useAppState()
 
-  const infoToShow = timezoneState.dateTime ? (
+  const infoToShow = timezoneState.selectedTimezone ? (
     <p>
-      The current time for selected timezone is: <span>{timezoneState.dateTime}</span>
+      The current time for selected timezone is:{' '}
+      <span>{isDateTimeLoading ? 'Loading...' : timezoneState.dateTime}</span>
     </p>
   ) : (
     <span>Select time zone to see its time</span>

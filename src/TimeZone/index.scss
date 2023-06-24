@@ -10,6 +10,12 @@
   border-radius: 18px;
   box-shadow: var(--drop-shadow);
 
+  &-loading {
+    color: var(--darkGrayColor);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
   .dateTime__timeZone {
     width: 280px;
     height: 41px;
