@@ -1,17 +1,13 @@
 import './index.scss'
+import { FallbackProps } from 'react-error-boundary'
 
-type TimezoneErrorProps = {
-  timezonesError?: Error
-  timezoneDataError?: Error
-}
-
-const TimezoneError = ({ timezonesError, timezoneDataError }: TimezoneErrorProps) => {
+const TimezoneError = ({ error, resetErrorBoundary }: FallbackProps) => {
   return (
     <div className='dateTime__error'>
       <p>
-        Something went wrong with the API call:{' '}
-        <span>{timezonesError?.message || timezoneDataError?.message}</span>
+        Something went wrong with the API call: <span>{error.message}</span>
       </p>
+      <button onClick={resetErrorBoundary}>Reload aplication</button>
     </div>
   )
 }

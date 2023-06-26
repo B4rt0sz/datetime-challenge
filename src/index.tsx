@@ -6,7 +6,14 @@ import App from './App'
 
 export const TIMEZONE_API = 'https://worldtimeapi.org/api/timezone'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 2,
+      useErrorBoundary: true,
+    },
+  },
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 

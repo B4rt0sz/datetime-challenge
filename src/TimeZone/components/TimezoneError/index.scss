@@ -1,12 +1,32 @@
 .dateTime__error {
   p {
-    margin-top: 16px;
+    margin: 16px 0;
     color: var(--darkGrayColor);
     font-size: 14px;
+    line-height: 24px;
+    text-align: left;
   }
 
   span {
     color: var(--redColor);
     font-weight: 600;
+  }
+
+  button {
+    padding: 6px 16px;
+    border-radius: 18px;
+    background-color: var(--midGrayColor);
+    border: 1px solid var(--midGrayColor);
+    font-family: var(--default-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--darkGrayColor);
+    cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border: 1px solid var(--darkGrayColor);
+      }
+    }
   }
 }

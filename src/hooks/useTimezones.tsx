@@ -7,13 +7,9 @@ const fetchTimezones = async (apiUrl: string) => {
 }
 
 export const useTimezones = (apiUrl: string) => {
-  const {
-    data: timezonesList,
-    isLoading: timezonesLoading,
-    error: timezonesError,
-  } = useQuery('timezones', () => fetchTimezones(apiUrl), {
-    retry: 0,
-  })
+  const { data: timezonesList, isLoading: timezonesLoading } = useQuery('timezones', () =>
+    fetchTimezones(apiUrl)
+  )
 
-  return { timezonesList, timezonesLoading, timezonesError }
+  return { timezonesList, timezonesLoading }
 }

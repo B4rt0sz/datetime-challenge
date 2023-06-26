@@ -30,7 +30,8 @@ body {
   color: var(--dark-txt);
 }
 
-.dateTime__container {
+.dateTime__container,
+.dateTime__error {
   width: 550px;
   min-height: 200px;
   display: flex;

@@ -7,19 +7,14 @@ const fetchTimezoneData = async (apiUrl: string, selectedTimezone: string) => {
 }
 
 export const useTimezoneData = (apiUrl: string, selectedTimezone: string) => {
-  const {
-    data: timezoneData,
-    isLoading: timezoneDataLoading,
-    error: timezoneDataError,
-  } = useQuery(
+  const { data: timezoneData, isLoading: timezoneDataLoading } = useQuery(
     ['timezoneData', selectedTimezone],
     () => fetchTimezoneData(apiUrl, selectedTimezone),
     {
       enabled: !!selectedTimezone,
-      retry: 0,
       refetchInterval: 5000,
     }
   )
 
-  return { timezoneData, timezoneDataLoading, timezoneDataError }
+  return { timezoneData, timezoneDataLoading }
 }
