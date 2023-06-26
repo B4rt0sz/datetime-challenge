@@ -29,3 +29,16 @@ body {
   background-color: var(--main-bgc);
   color: var(--dark-txt);
 }
+
+.dateTime__container {
+  width: 550px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--light-bgc);
+  border-radius: 18px;
+  box-shadow: var(--drop-shadow);
+}
